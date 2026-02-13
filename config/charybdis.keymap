@@ -42,7 +42,7 @@
 
         layer_0 {
             bindings = <
-&lt 3 Q  &kp W  &kp F     &kp P             &kp G       &kp J   &kp L               &kp U      &kp Y    &kp ;
+&lt 3 Q  &kp W  &kp F     &kp P             &kp G       &kp J   &kp L               &kp U      &kp Y    &kp SEMI
 &kp A    &kp R  &kp S     &mt LEFT_SHIFT T  &kp D       &kp H   &mt LEFT_SHIFT N    &kp E      &kp I    &kp O
 &kp Z    &kp X  &kp C     &kp V             &kp B       &kp K   &kp M               &kp COMMA  &kp DOT  &kp ESC
                 &mkp MB1  &mkp MB2  &lt 1 ENTER    &kp BACKSPACE  &lt 2 SPACE

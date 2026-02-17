@@ -27,7 +27,7 @@
         layer_1 {
             bindings = <
 &kp TAB     &tdsqt          &kp DQT     &kp LPAR  &kp RPAR  &none       &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &kp MINUS
-&kp FSLH    &kp BACKSLASH   &kp LBRC    &kp RBRC  &kp LBKT  &kt RBKT    &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &kp PLUS     
+&kp FSLH    &kp BACKSLASH   &kp LBRC    &kp RBRC  &kp LBKT  &kt RBKT    &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &kp EQUALS     
 &kp LCTRL   &kp LEFT_ALT    &kp DEL     &kp CAPS  &kp LGUI  &none       &mt LS(N1) N1  &mt LS(N2) N2  &mt LS(N3) N3  &kp DOT  
                            &none         &none     &none      &none    &kp N0
             >;

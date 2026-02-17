@@ -1,0 +1,10 @@
+/ { 
+        behaviors {
+                tdsqt: tap_dance_sqt {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp SQT>, <&kp DQT>;
+                };
+        };
+};

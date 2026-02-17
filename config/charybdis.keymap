@@ -4,57 +4,32 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
+#include "includes/keys.h"
+#include "includes/settings.dtsi"
+#include "includes/dance.dtsi"
+#include "includes/macros.dtsi"
+#include "includes/mods.dtsi"
+#include "includes/morphs.dtsi"
 
-/ {
-    macros {
-        To1_macro: To1_macro {
-            compatible = "zmk,behavior-macro";
-            label = "To1_macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
-        };
-
-        To0_macro: To0_macro {
-            compatible = "zmk,behavior-macro";
-            label = "To0_macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFR &to 0>;
-        };
-
-        To2_macro: To2_macro {
-            compatible = "zmk,behavior-macro";
-            label = "To2_macro";
-            #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_wait_time 30>,
-                <&rgb_ug RGB_COLOR_HSB(250,100,50)>;
-        };
-    };
-
+/{ 
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&lt 3 Q  &kp W  &kp F     &kp P             &kp G       &kp J   &kp L               &kp U      &kp Y    &kp SEMI
-&kp A    &kp R  &kp S     &mt LEFT_SHIFT T  &kp D       &kp H   &mt LEFT_SHIFT N    &kp E      &kp I    &kp O
-&kp Z    &kp X  &kp C     &kp V             &kp B       &kp K   &kp M               &kp COMMA  &kp DOT  &kp ESC
-                &mkp MB1  &mkp MB2  &lt 1 ENTER    &kp BACKSPACE  &lt 2 SPACE
+&lt 3 Q     &kp W           &kp F           &kp P               &kp G       &kp J   &kp L               &kp U           &kp Y       &kp SEMI
+&kp A       &hml LALT R     &hml LCTRL S    &hml LEFT_SHIFT T   &kp D       &kp H   &hmr LEFT_SHIFT N   &hmr LCTRL E    &hmr RALT I &kp O
+&mt LC(Z) Z &mt LC(X) X     &mt LC(C) C     &mt LC(V) V         &mt LC(B) B &kp K   &kp M               &kp COMMA       &kp DOT     &kp ESC
+                &mkp MB1  &mkp MB2  &lt 1 ENTER    &bspc_del  &lt 2 SPACE
             >;
         };
 
         layer_1 {
             bindings = <
-&kp TAB     &kp SQT         &kp DQT             &kp LPAR  &kp RPAR  &trans  &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp FSLH    &kp BACKSLASH   &kp LEFT_BRACKET    &kp RBKT  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp PLUS     
-&kp LCTRL   &kp LEFT_ALT    &kp DEL             &kp CAPS  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp DOT  
-                           &none         &none     &kp LGUI      &trans    &kp N0
+&kp TAB     &tdsqt          &kp DQT     &kp LPAR  &kp RPAR  &none       &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &kp MINUS
+&kp FSLH    &kp BACKSLASH   &kp LBRC    &kp RBRC  &kp LBKT  &kt RBKT    &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &kp PLUS     
+&kp LCTRL   &kp LEFT_ALT    &kp DEL     &kp CAPS  &kp LGUI  &none       &mt LS(N1) N1  &mt LS(N2) N2  &mt LS(N3) N3  &kp DOT  
+                           &none         &none     &none      &none    &kp N0
             >;
         };
 
@@ -70,7 +45,7 @@
         layer_3 {
             bindings = <
 &none  &none  &none  &none  &none    &none       &none         &none         &none         &none
-&none  &none  &none  &none  &none    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+&rgb_ug RGB_TOG  &none  &none  &none  &none    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
 &none  &none  &none  &none  &none    &none       &none         &none         &none         &none
               &none  &none  &none    &none       &none
             >;

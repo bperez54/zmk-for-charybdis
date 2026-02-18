@@ -11,25 +11,25 @@
 #include "includes/mods.dtsi"
 #include "includes/morphs.dtsi"
 
-/{ 
-    keymap {
+/ 
+    keymap 
         compatible = "zmk,keymap";
 
-        layer_0 {
+        layer_0 
             bindings = <
 &lt 3 Q     &kp W           &kp F           &kp P               &kp G       &kp J   &kp L               &kp U           &kp Y       &tdsqt
-&kp A       &hml LALT R     &hml LCTRL S    &hml LEFT_SHIFT T   &kp D       &kp H   &hmr LEFT_SHIFT N   &hmr LCTRL E    &hmr RALT I &kp O
+&lt CAPS A  &hml LALT R     &hml LCTRL S    &hml LEFT_SHIFT T   &hml LGUI D       &kp H   &hmr LEFT_SHIFT N   &hmr LCTRL E    &hmr RALT I &kp O
 &mt LC(Z) Z &mt LC(X) X     &mt LC(C) C     &mt LC(V) V         &mt LC(B) B &kp K   &kp M               &kp COMMA       &kp DOT     &mt LS(FSLH) ESC
                 &mkp MB1  &mkp MB2  &lt 1 ENTER    &bspc_del  &lt 2 SPACE
             >;
-        };
+        ;
 
         layer_1 {
             bindings = <
-&kp TAB     &kp SEMI          &kp DQT     &kp LPAR  &kp RPAR  &none       &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &kp MINUS
+&kp TAB     &kp SEMI          &kp DQT     &kp LPAR  &kp RPAR  &none       &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &mt LS(MINUS) MINUS
 &kp FSLH    &kp BACKSLASH   &kp LBRC    &kp RBRC  &kp LBKT  &kt RBKT    &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &kp EQUAL     
 &kp LCTRL   &kp LEFT_ALT    &kp DEL     &kp CAPS  &kp LGUI  &none       &mt LS(N1) N1  &mt LS(N2) N2  &mt LS(N3) N3  &kp DOT  
-                           &none         &none     &none      &none    &kp N0
+                           &none         &none     &none      &none    &mt LS(N0) N0
             >;
         };
 
@@ -103,5 +103,5 @@
                 
                 
         };*/
-    };
-};
+    ;
+;

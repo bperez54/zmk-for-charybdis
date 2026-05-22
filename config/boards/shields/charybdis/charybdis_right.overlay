@@ -123,7 +123,7 @@
 
         scroller {
             layers = <1>;   // change this to your scroll layer number
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_to_scroll_mapper 1 -1>;
         };
     };
 };
